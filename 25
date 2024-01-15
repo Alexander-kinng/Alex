@@ -1,0 +1,4 @@
+def genre_weekday(df, day, time1, time2):
+    genre_df=df[(df['weekday']==day) & (df['time']>time1) & (df['time']<=time2)]
+    genre_df_sorted = genre_list.groupby('genre_name')['genre_name'].count().sort_values(ascending = False)
+    return genre_df_sorted [:10]
